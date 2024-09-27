@@ -1,0 +1,45 @@
+<resources>
+    <!-- Important String Resources -->
+    <string name="app_name">FIFA World Cup 2022 DB App</string>
+    <string name="add_team">Add Team</string>
+    <string name="edit_team">Edit Team</string>
+    <string name="delete_team">Delete Team</string>
+    <string name="display_team">Display Team</string>
+    <string name="submit_team">Submit Team</string>
+    <string name="copyright">© 2023 by Jeremy D\'cruz, SID 991515994</string>
+    <string name="update_team">Update Team</string>
+
+    <!-- More Important String Resources  -->
+    <string name="team_name">Team Name</string>
+    <string name="continent">Continent</string>
+    <string name="played_games">Played Games</string>
+    <string name="won_games">Won Games</string>
+    <string name="drawn_games">Drawn Games</string>
+    <string name="lost_games">Lost Games</string>
+    <string name="search_hint">Search for Teams</string>
+    <string name="magnifying_glass_description">Search</string>
+    <string-array name="continents">
+        <item>S. America</item>
+        <item>Europe</item>
+        <item>Africa</item>
+    </string-array>
+    <string name="flag_image_description">Flag of %s</string>
+
+    <string name="team_name_header">Team Name</string>
+    <string name="continent_header">Continent</string>
+    <string name="played_header">Played</string>
+    <string name="won_header">Won</string>
+    <string name="drawn_header">Drawn</string>
+    <string name="lost_header">Lost</string>
+    <string name="points_header">Points</string>
+
+
+
+
+    <!-- Sample String Resources. Can be Removed Later -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="addSampleText">Hello Add Team Please</string>
+    <string name="editSampleText">Hello Edit Team Please</string>
+    <string name="deleteSampleText">Hello Delete Team Please</string>
+    <string name="displaySampleText">Hello Display Team Please</string>
+</resources>

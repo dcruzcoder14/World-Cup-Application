@@ -1,0 +1,74 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.worldcupdatabaseapplication.HomeFragment"
+        android:label="FIFA World Cup 2022 Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_addTeamFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_deleteFragment"
+            app:destination="@id/deleteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_displayFragment"
+            app:destination="@id/displayFragment" />
+        <!-- Define other actions for navigation here -->
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.worldcupdatabaseapplication.AddFragment"
+        android:label="Add Team"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.worldcupdatabaseapplication.EditFragment"
+        android:label="Edit Team"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_editDetailsFragment"
+            app:destination="@id/editDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteFragment"
+        android:name="com.example.worldcupdatabaseapplication.DeleteFragment"
+        android:label="Delete Team"
+        tools:layout="@layout/fragment_delete" />
+    <fragment
+        android:id="@+id/displayFragment"
+        android:name="com.example.worldcupdatabaseapplication.DisplayFragment"
+        android:label="Display Team(s)"
+        tools:layout="@layout/fragment_display" />
+
+    <!-- Define other fragments here -->
+    <fragment
+        android:id="@+id/editDetailsFragment"
+        android:name="com.example.worldcupdatabaseapplication.EditDetailsFragment"
+        android:label="Edit Details">
+        <argument
+            android:name="teamId"/>
+        <action
+            android:id="@+id/action_editDetailsFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_editDetailsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+
+
+</navigation>

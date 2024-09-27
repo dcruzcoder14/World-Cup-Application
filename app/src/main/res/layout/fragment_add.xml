@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AddFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/teamNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/team_name"
+            android:scrollbarSize="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/wonEditText"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/continentSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/teamNameEditText"
+            app:layout_constraintStart_toStartOf="@+id/teamNameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/teamNameEditText" />
+
+        <EditText
+            android:id="@+id/playedEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/played_games"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/continentSpinner"
+            app:layout_constraintStart_toStartOf="@+id/continentSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/continentSpinner" />
+
+        <EditText
+            android:id="@+id/wonEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/won_games"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/teamNameEditText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/drawnEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/drawn_games"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/wonEditText"
+            app:layout_constraintStart_toStartOf="@+id/wonEditText"
+            app:layout_constraintTop_toBottomOf="@+id/wonEditText" />
+
+        <EditText
+            android:id="@+id/lostEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:hint="@string/lost_games"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/drawnEditText"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/drawnEditText"
+            app:layout_constraintTop_toBottomOf="@+id/drawnEditText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitTeamButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_team"
+            app:backgroundTint="#1974BC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playedEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
